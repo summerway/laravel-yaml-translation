@@ -1,0 +1,33 @@
+{
+  "name": "maplesnow/laravel-yaml-translation",
+  "description": "Provide YAML file support to Laravel language translation",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "mapleSnow",
+      "email": "summerweiace@163.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "illuminate/support": "5.5.*|5.6.*|5.7.*",
+    "illuminate/translation": "5.5.*|5.6.*|5.7.*",
+    "illuminate/http": "5.5.*|5.6.*|5.7.*",
+    "symfony/yaml": "3.*"
+  },
+  "require-dev": {
+    "laravel/framework": "^5.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "MapleSnow\\Apollo\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "MapleSnow\\Yaml\\Providers\\TranslationServiceProvider"
+      ]
+    }
+  }
+}
