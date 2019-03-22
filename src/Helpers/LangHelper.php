@@ -8,6 +8,8 @@
 
 namespace MapleSnow\Yaml\Helper;
 
+use Config;
+
 class LangHelper
 {
 
@@ -15,7 +17,7 @@ class LangHelper
      * validation的attribute信息
      * @return array|\Illuminate\Contracts\Translation\Translator|string|null
      */
-    public function getValidateAttribute(){
+    static public function getValidateAttribute(){
         $prefix = Config::get("app.lang_prefix","lang");
         return trans($prefix.".validation.attribute");
     }
@@ -24,7 +26,7 @@ class LangHelper
      * validation的验证信息
      * @return array|\Illuminate\Contracts\Translation\Translator|string|null
      */
-    public function getValidateInfo(){
+    static public function getValidateInfo(){
         $prefix = Config::get("app.lang_prefix","lang");
         return trans($prefix.".validation.validate");
     }

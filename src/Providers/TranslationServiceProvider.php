@@ -4,11 +4,12 @@ namespace MapleSnow\Yaml;
 
 use \Illuminate\Translation\TranslationServiceProvider as IlluminateTranslationServiceProvider;
 use MapleSnow\Yaml\Helper\YamlFileLoader;
+use Config;
 
 class TranslationServiceProvider extends IlluminateTranslationServiceProvider
 {
     public function boot() {
-        $path = realpath(__DIR__.'../../lang.yml');
+        $path = realpath(__DIR__.'/../../lang.yml');
         $this->publishes([$path => resource_path("lang/zh-CN/".Config::get("app.lang_prefix","lang").".yml")]);
     }
 
