@@ -6,7 +6,7 @@
  * Time: 13:41
  */
 
-namespace MapleSnow\Yaml\Requests;
+namespace MapleSnow\Yaml\Request;
 
 use Illuminate\Foundation\Http\FormRequest;
 use MapleSnow\Yaml\Helper\LangHelper;

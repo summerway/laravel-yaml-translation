@@ -9,7 +9,7 @@ composer require maplesnow/laravel-yaml-translation
 将 **app/config/app.php** 中 `Illuminate\Translation\TranslationServiceProvider` 替换成 `MapleSnow\Yaml\TranslationServiceProvider`
 
 ## Validation
-将`request`文件继承`MapleSnow\Yaml\BaseRequest.php`
+将`request`文件继承`MapleSnow\Yaml\Request\BaseRequest.php`
 
 
 ## 用法示例
