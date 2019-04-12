@@ -9,10 +9,26 @@
 namespace MapleSnow\Yaml\Request;
 
 use Illuminate\Foundation\Http\FormRequest;
-use MapleSnow\Yaml\Helper\LangHelper;
+use Illuminate\Support\Facades\Config;
 
 class BaseRequest extends FormRequest
 {
+
+    private $prefix;    // 语言包前缀
+    private $module;    // 模块名
+
+    public function getPrefix(){
+        is_null($this->prefix) && $this->prefix = Config::get("app.lang_prefix","lang");
+        return $this->prefix;
+    }
+
+    public function setModule($module){
+        $this->module = $module;
+    }
+
+    public function getModule() {
+        return $this->module;
+    }
 
     /**
      * 调整input
@@ -24,8 +40,8 @@ class BaseRequest extends FormRequest
     {
 
         return data_get(
-            $this->getInputSource()->all() + $this->query->all(), $key, $default
-        ) ?? $default;
+                $this->getInputSource()->all() + $this->query->all(), $key, $default
+            ) ?? $default;
     }
 
     /**
@@ -33,7 +49,13 @@ class BaseRequest extends FormRequest
      * @return array|\Illuminate\Contracts\Translation\Translator|string|null
      */
     public function attributes() {
-        $data = LangHelper::getValidateAttribute();
+        $module = $this->getModule();
+        if($module){
+            $data = trans("{$this->getPrefix()}.validation.attribute.{$module}");
+        }else{
+            $data = trans("{$this->getPrefix()}.validation.attribute");
+        }
+
         return is_array($data) ? $data : array();
     }
 
@@ -43,7 +65,8 @@ class BaseRequest extends FormRequest
      * @return array|\Illuminate\Contracts\Translation\Translator|string|null
      */
     public function messages(){
-        $data =  LangHelper::getValidateInfo();
+        $data =  trans("{$this->getPrefix()}.validation.validate");
+
         return is_array($data) ? $data : array();
     }
 

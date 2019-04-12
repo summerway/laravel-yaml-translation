@@ -17,6 +17,46 @@ php artisan vendor:publish --provider="MapleSnow\Yaml\TranslationServiceProvider
 ## Validation
 将`request`文件继承`MapleSnow\Yaml\Request\BaseRequest.php`
 
+如果需要翻译指定模块的属性
+```yaml
+# 验证
+validation:
+  'attribute':
+      'id': '编号'
+      # 添加模块
+      'module':
+        'name': '模块名称'
+```
+
+在`Request`文件中`rules`指定模块
+```php
+class ModuleRequest extends BaseRequest {
+
+    /**
+     * Determine if the user is authorized to make this request.
+     *
+     * @return bool
+     */
+    public function authorize() {
+        return true;
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function rules() {
+        # 指定模块
+        $this->setModule("module");
+        return [
+            'name' => 'required'
+        ];
+    }
+}
+```
+
+
 
 ## 用法示例
 ```php
