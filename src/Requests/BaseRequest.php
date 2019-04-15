@@ -51,7 +51,7 @@ class BaseRequest extends FormRequest
     public function attributes() {
         $module = $this->getModule();
         if($module){
-            $data = trans("{$this->getPrefix()}.validation.attribute.{$module}");
+            $data = trans("{$this->getPrefix()}.attribute.{$module}");
         }else{
             $data = trans("{$this->getPrefix()}.validation.attribute");
         }
@@ -69,5 +69,4 @@ class BaseRequest extends FormRequest
 
         return is_array($data) ? $data : array();
     }
-
 }

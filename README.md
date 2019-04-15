@@ -19,13 +19,10 @@ php artisan vendor:publish --provider="MapleSnow\Yaml\TranslationServiceProvider
 
 如果需要翻译指定模块的属性
 ```yaml
-# 验证
-validation:
-  'attribute':
-      'id': '编号'
-      # 添加模块
-      'module':
-        'name': '模块名称'
+# 添加自定义属性
+attribute:
+  module:
+    name: '模块名称'
 ```
 
 在`Request`文件中`rules`指定模块
