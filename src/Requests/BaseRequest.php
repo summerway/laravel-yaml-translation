@@ -6,7 +6,7 @@
  * Time: 13:41
  */
 
-namespace MapleSnow\Yaml\Request;
+namespace MapleSnow\Yaml\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Config;

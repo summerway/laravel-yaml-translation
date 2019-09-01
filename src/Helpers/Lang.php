@@ -6,7 +6,7 @@
  * Time: 4:13 PM
  */
 
-namespace MapleSnow\Yaml\Helper;
+namespace MapleSnow\Yaml\Helpers;
 
 class Lang {
 

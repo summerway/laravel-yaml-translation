@@ -1,6 +1,6 @@
 <?php
 
-namespace MapleSnow\Yaml\Helper;
+namespace MapleSnow\Yaml\Helpers;
 
 use Illuminate\Translation\FileLoader;
 use Symfony\Component\Yaml\Parser;

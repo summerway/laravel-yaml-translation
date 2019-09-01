@@ -3,7 +3,7 @@
 namespace MapleSnow\Yaml;
 
 use \Illuminate\Translation\TranslationServiceProvider as IlluminateTranslationServiceProvider;
-use MapleSnow\Yaml\Helper\YamlFileLoader;
+use MapleSnow\Yaml\Helpers\YamlFileLoader;
 use Config;
 
 class TranslationServiceProvider extends IlluminateTranslationServiceProvider

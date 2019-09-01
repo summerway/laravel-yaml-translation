@@ -6,7 +6,7 @@
  * Time: 11:05 AM
  */
 
-namespace MapleSnow\Yaml\Helper;
+namespace MapleSnow\Yaml\Helpers;
 
 class LangHelper {
     const
