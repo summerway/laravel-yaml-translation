@@ -9,8 +9,8 @@ use Config;
 class TranslationServiceProvider extends IlluminateTranslationServiceProvider
 {
     public function boot() {
-        $path = realpath(__DIR__.'/../../lang.yml');
-        $this->publishes([$path => resource_path("lang/zh-CN/".Config::get("app.lang_prefix","lang").".yml")]);
+        $path = realpath(__DIR__.'/../../resources/lang');
+        $this->publishes([$path => resource_path("lang")]);
     }
 
 

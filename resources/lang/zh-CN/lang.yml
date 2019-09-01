@@ -1,6 +1,56 @@
-# 用户自定义
-message:
-  hello: "你好,:name"
+operate:
+  default_success: "操作:attribute成功"
+  create_success: "创建:attribute成功"
+  update_success: "编辑:attribute成功"
+  delete_success: "删除:attribute成功"
+  online_success: "上线:attribute成功"
+  offline_success: "下线:attribute成功"
+  enable_success: "启用:attribute成功"
+  disable_success: "禁用:attribute成功"
+  publish_success: "发布:attribute成功"
+  import_success: "导入:attribute成功"
+  export_success: "导出:attribute成功"
+  recover_success: "回收:attribute成功"
+
+  default_failed: "操作:attribute失败"
+  create_failed: "创建:attribute失败"
+  update_failed: "编辑:attribute失败"
+  delete_failed: "删除:attribute失败"
+  online_failed: "上线:attribute失败"
+  offline_failed: "下线:attribute失败"
+  enable_failed: "启用:attribute失败"
+  disable_failed: "禁用:attribute失败"
+  publish_failed: "发布:attribute失败"
+  import_failed: "导入:attribute失败"
+  export_failed: "导出:attribute失败"
+  recover_failed: "回收:attribute失败"
+
+  batch_delete_success: "批量删除:attribute成功"
+  batch_online_success: "批量上线:attribute成功"
+  batch_offline_success: "批量下线:attribute成功"
+  batch_enable_success: "批量启用:attribute成功"
+  batch_eisable_success: "批量禁用:attribute成功"
+  batch_recover_success: "批量回收:attribute成功"
+
+  batch_delete_failed: "批量删除:attribute失败"
+  batch_online_failed: "批量上线:attribute失败"
+  batch_offline_failed: "批量下线:attribute失败"
+  batch_enable_failed: "批量启用:attribute失败"
+  batch_disable_failed: "批量禁用:attribute失败"
+  batch_recover_failed: "批量回收:attribute失败"
+
+result:
+  paramMiss: ":attribute参数缺失"
+  paramError: ":attribute参数错误"
+  resourceMiss: ":attribute资源不存在"
+  created: ":attribute资源已存在"
+  badRequest: "请求错误"
+  unauthorized: "未登录"
+  forbidden: "无权操作"
+  notAcceptable: "不支持该操作"
+  operatingException: "操作错误"
+  systemError: "系统错误"
+  nothingChanged: "数据未发生修改"
 
 # 验证
 validation:
@@ -99,34 +149,13 @@ validation:
     'uploaded': ':attribute 上传失败'
     'url': ':attribute 格式不正确'
     'uuid': ':attribute 必须是有效的 UUID'
-  'attribute':
-    'id': '编号'
-    'name': '名称'
-    'username': '用户名'
-    'email': '邮箱'
-    'first_name': '名'
-    'last_name': '姓'
-    'password': '密码'
-    'password_confirmation': '确认密码'
-    'city': '城市'
-    'country': '国家'
-    'address': '地址'
-    'phone': '电话'
-    'mobile': '手机'
-    'age': '年龄'
-    'sex': '性别'
-    'gender': '性别'
-    'day': '天'
-    'month': '月'
-    'year': '年'
-    'hour': '时'
-    'minute': '分'
-    'second': '秒'
-    'title': '标题'
-    'content': '内容'
-    'description': '描述'
-    'excerpt': '摘要'
-    'date': '日期'
-    'time': '时间'
-    'available': '可用的'
-    'size': '大小'
+
+
+# custom message
+message:
+  hello: "你好,:name"
+
+# custom attribute
+attribute:
+  demo:
+    table_name: '测试'

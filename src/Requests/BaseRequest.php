@@ -69,4 +69,14 @@ class BaseRequest extends FormRequest
 
         return is_array($data) ? $data : array();
     }
+
+    /**
+     * Determine if the user is authorized to make this request.
+     *
+     * @return bool
+     */
+    /*public function authorize()
+    {
+        return true;
+    }*/
 }
