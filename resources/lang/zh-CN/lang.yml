@@ -40,17 +40,17 @@ operate:
   batch_recover_failed: "批量回收:attribute失败"
 
 result:
-  paramMiss: ":attribute参数缺失"
-  paramError: ":attribute参数错误"
-  resourceMiss: ":attribute资源不存在"
+  param_miss: ":attribute参数缺失"
+  param_error: ":attribute参数错误"
+  resource_miss: ":attribute资源不存在"
   created: ":attribute资源已存在"
-  badRequest: "请求错误"
+  bad_request: "请求错误"
   unauthorized: "未登录"
   forbidden: "无权操作"
-  notAcceptable: "不支持该操作"
-  operatingException: "操作错误"
-  systemError: "系统错误"
-  nothingChanged: "数据未发生修改"
+  not_acceptable: "不支持该操作"
+  operating_exception: "操作错误"
+  system_error: "系统错误"
+  nothing_changed: "数据未发生修改"
 
 # 验证
 validation:
