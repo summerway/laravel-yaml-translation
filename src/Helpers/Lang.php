@@ -111,10 +111,11 @@ class Lang {
     /**
      * 消息翻译
      * @param $param
-     * @return array|\Illuminate\Contracts\Translation\Translator|null|string
+     * @param array $replace
+     * @return mixed
      */
-    static public function message($param){
-        return trans("lang.message.{$param}");
+    static public function message($param, $replace = []){
+        return trans("lang.message.{$param}", $replace);
     }
 
     /*************************** 操作 ***************************/
