@@ -6,12 +6,12 @@ composer require maplesnow/laravel-yaml-translation
 ```
 
 ## 添加laravel支持  
-将 **app/config/app.php** 中 `Illuminate\Translation\TranslationServiceProvider` 替换成 `MapleSnow\Yaml\TranslationServiceProvider`
+将 **app/config/app.php** 中 `Illuminate\Translation\TranslationServiceProvider` 替换成 `MapleSnow\Yaml\Providers\TranslationServiceProvider`
 
 ## 发布yml文件到项目中:
 
 ```
-php artisan vendor:publish --provider="MapleSnow\Yaml\TranslationServiceProvider"
+php artisan vendor:publish --provider="MapleSnow\Yaml\Providers\TranslationServiceProvider"
 ```
 
 ## 用法示例
