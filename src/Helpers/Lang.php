@@ -235,6 +235,30 @@ class Lang {
     }
 
     /**
+     * 通过成功
+     * @param string $attr 属性
+     * @param bool $needTransAttr 是否需要翻译属性
+     * @param bool $isMulti 是否批量
+     * @return array|\Illuminate\Contracts\Translation\Translator|null|string
+     */
+    static public function approveSuccess($attr = "",$needTransAttr = false,$isMulti = false) {
+        $needTransAttr && $attr = self::attribute($attr);
+        return LangHelper::operate($isMulti ? LangHelper::OP_BATCH_APPROVE : LangHelper::OP_APPROVE,$attr,LangHelper::RS_SUCCESS);
+    }
+
+    /**
+     * 拒绝成功
+     * @param string $attr 属性
+     * @param bool $needTransAttr 是否需要翻译属性
+     * @param bool $isMulti 是否批量
+     * @return array|\Illuminate\Contracts\Translation\Translator|null|string
+     */
+    static public function refuseSuccess($attr = "",$needTransAttr = false,$isMulti = false) {
+        $needTransAttr && $attr = self::attribute($attr);
+        return LangHelper::operate($isMulti ? LangHelper::OP_BATCH_REFUSE : LangHelper::OP_REFUSE,$attr,LangHelper::RS_SUCCESS);
+    }
+
+    /**
      * 下线成功
      * @param string $attr 属性
      * @param bool $needTransAttr 是否需要翻译属性

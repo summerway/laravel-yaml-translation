@@ -1,6 +1,6 @@
 <?php
 
-namespace MapleSnow\Yaml;
+namespace MapleSnow\Yaml\Providers;
 
 use \Illuminate\Translation\TranslationServiceProvider as IlluminateTranslationServiceProvider;
 use MapleSnow\Yaml\Helpers\YamlFileLoader;

@@ -22,13 +22,17 @@ class LangHelper {
         OP_IMPORT = 'import',
         OP_EXPORT = 'export',
         OP_RECOVER = 'recover',
+        OP_APPROVE="approve",
+        OP_REFUSE="refuse",
 
         OP_BATCH_DELETE = 'batch_delete',
         OP_BATCH_ONLINE = 'batch_online',
         OP_BATCH_OFFLINE = 'batch_offline',
         OP_BATCH_ENABLE = 'batch_enable',
         OP_BATCH_DISABLE = 'batch_disable',
-        OP_BATCH_RECOVER = 'batch_recover'
+        OP_BATCH_RECOVER = 'batch_recover',
+        OP_BATCH_APPROVE="batch_approve",
+        OP_BATCH_REFUSE="batch_refuse"
     ;
 
     const
