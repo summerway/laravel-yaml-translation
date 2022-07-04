@@ -10,6 +10,7 @@ namespace MapleSnow\Yaml\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 
 class BaseRequest extends FormRequest
@@ -72,7 +73,11 @@ class BaseRequest extends FormRequest
         return is_array($data) ? $data : array();
     }
 
-    private function appendCamel($arr) {
+    private function appendCamel($arr): array {
+        if(is_array($arr)){
+            Log::warning(json_encode($arr)." lack of language config");
+            return [];
+        }
         foreach ($arr as $key => $value){
             $keyCamel = Str::camel($key);
             if($keyCamel != $key){
