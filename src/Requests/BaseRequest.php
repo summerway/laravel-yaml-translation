@@ -68,13 +68,13 @@ class BaseRequest extends FormRequest
      * @return array|\Illuminate\Contracts\Translation\Translator|string|null
      */
     public function messages(){
-        $data =  trans("{$this->getPrefix()}.validation.validate");
+        $data = trans("{$this->getPrefix()}.validation.validate");
 
         return is_array($data) ? $data : array();
     }
 
     private function appendCamel($arr): array {
-        if(is_array($arr)){
+        if(!is_array($arr)){
             Log::warning(json_encode($arr)." lack of language config");
             return [];
         }

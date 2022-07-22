@@ -23,7 +23,6 @@
       "MapleSnow\\Yaml\\": "src/"
     }
   },
-  "minimum-stability": "dev",
   "extra": {
     "laravel": {
       "providers": [
